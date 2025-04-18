@@ -1,1 +1,1 @@
-export { default } from './DataPoint'
+export * from './DataPoint'
