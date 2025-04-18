@@ -1,1 +1,1 @@
-export { default } from './DataAgreggate'
+export * from './DataAgreggate'
