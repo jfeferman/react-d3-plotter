@@ -1,12 +1,10 @@
 module.exports = {
-  roots: [
-    '<rootDir>/src',
-  ],
+  roots: ['<rootDir>/src'],
   preset: 'ts-jest',
   testEnvironment: 'node',
   transform: {
-    '^.+\\.tsx?$': 'babel-jest',
+    '^.+\\.tsx?$': 'babel-jest'
   },
   snapshotSerializers: ['enzyme-to-json/serializer'],
-  setupFilesAfterEnv: ['<rootDir>/src/config/enzyme.ts'],
-};
+  setupFilesAfterEnv: ['<rootDir>/src/config/enzyme.ts']
+}

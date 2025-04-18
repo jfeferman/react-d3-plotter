@@ -1,22 +1,10 @@
-import React from 'react'
-import { DataPointProps } from './types'
-
-const DataPoint: React.SFC<DataPointProps> = (props) => {
-  const {
-    coords,
-    xScale,
-    yScale,
-    radius,
-  } = props
-
-  return (
-    <circle
-      cx={xScale(coords[0])}
-      cy={yScale(coords[1])}
-      r={radius}
-      key={Math.random() * 1}
-    />
-  )
+type DataPointProps = {
+  coords: number[]
+  xScale: (point: number) => number
+  yScale: (point: number) => number
+  radius: number
 }
 
-export default DataPoint
+export const DataPoint = ({ coords, xScale, yScale, radius }: DataPointProps) => {
+  return <circle cx={xScale(coords[0])} cy={yScale(coords[1])} r={radius} key={Math.random() * 1} />
+}
