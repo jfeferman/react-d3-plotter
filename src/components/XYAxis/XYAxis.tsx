@@ -1,31 +1,20 @@
 import React from 'react'
-import Axis from '../Axis'
-import { XYAxisProps } from './types'
+import { Axis } from '../Axis'
+import { ScatterPlotSettings } from 'components/ScatterPlot'
 
-const XYAxis: React.SFC<XYAxisProps> = (props) => {
-  const {
-    settings,
-    xScale,
-    yScale,
-  } = props
+export type XYAxisProps = {
+  xScale: () => number
+  yScale: () => number
+  settings: ScatterPlotSettings
+}
 
-  const {
-    height,
-    padding,
-  } = settings;
+export const XYAxis = ({ xScale, yScale, settings }: XYAxisProps) => {
+  const { height, padding } = settings
 
   return (
     <g className="xy-axis">
-      <Axis
-        translate={`translate(0, ${height! - padding!})`}
-        scale={xScale}
-        orient="bottom"
-      />
-      <Axis
-        translate={`translate(${padding}, 0)`}
-        scale={yScale}
-        orient="left"
-      />
+      <Axis translate={`translate(0, ${height! - padding!})`} scale={xScale} orientation="bottom" />
+      <Axis translate={`translate(${padding}, 0)`} scale={yScale} orientation="left" />
     </g>
   )
 }

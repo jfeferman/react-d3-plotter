@@ -1,1 +1,1 @@
-export { default as ScatterPlot } from './components/ScatterPlot'
+export { default as ScatterPlot } from './components/ScatterPlot/ScatterPlot'

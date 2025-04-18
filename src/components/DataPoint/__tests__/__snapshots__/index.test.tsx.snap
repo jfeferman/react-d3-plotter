@@ -1,8 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`compponents/DataPoint matches the snapshot of the component 1`] = `
-<circle
-  cx={480}
-  cy={60}
-/>
-`;

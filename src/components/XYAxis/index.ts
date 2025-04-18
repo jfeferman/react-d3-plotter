@@ -1,1 +1,1 @@
-export { default } from './XYAxis'
+export * from './XYAxis'
