@@ -1,4 +1,3 @@
-import React from 'react'
 import { Axis } from '../Axis'
 import { ScatterPlotSettings } from 'components/ScatterPlot'
 

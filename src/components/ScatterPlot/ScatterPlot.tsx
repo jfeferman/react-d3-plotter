@@ -1,4 +1,3 @@
-import React from 'react'
 import { XYAxis } from '../XYAxis'
 import { DataAgreggate } from '../DataAgreggate'
 import { getXScale, getYScale } from '../../utils/utils'

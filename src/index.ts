@@ -1,1 +1,6 @@
-export { default as ScatterPlot } from './components/ScatterPlot/ScatterPlot'
+import ScatterPlot from './components/ScatterPlot/ScatterPlot'
+
+export { ScatterPlot }
+export default {
+  ScatterPlot
+}
