@@ -1,13 +1,9 @@
 import * as d3 from 'd3'
 import { ScatterPlotSettings } from 'components/ScatterPlot'
+import { DataPoint } from 'components/DataPoint'
 
-/**
- * Determine the x scale
- * @param data The data set
- * @param settings Plot settings
- */
-export const getXScale = (data: number[][], settings: ScatterPlotSettings) => {
-  const xMax = d3.max(data, (d: number[]) => d[0])
+export const getXScale = (data: DataPoint[], settings: ScatterPlotSettings) => {
+  const xMax = d3.max(data, (d: DataPoint) => d.x)
   return d3
     .scaleLinear()
     .domain([0, xMax])
@@ -19,8 +15,8 @@ export const getXScale = (data: number[][], settings: ScatterPlotSettings) => {
  * @param data The data set
  * @param settings Plot settings
  */
-export const getYScale = (data: number[][], settings: ScatterPlotSettings) => {
-  const yMax = d3.max(data, (d: number[]) => d[1])
+export const getYScale = (data: DataPoint[], settings: ScatterPlotSettings) => {
+  const yMax = d3.max(data, (d: DataPoint) => d.y)
   return d3
     .scaleLinear()
     .domain([0, yMax])

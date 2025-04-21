@@ -1,10 +1,25 @@
 type DataPointProps = {
-  coords: number[]
+  datum: DataPoint
   xScale: (point: number) => number
   yScale: (point: number) => number
-  radius: number
 }
 
-export const DataPoint = ({ coords, xScale, yScale, radius }: DataPointProps) => {
-  return <circle cx={xScale(coords[0])} cy={yScale(coords[1])} r={radius} fill="red" key={Math.random() * 1} />
+export type DataPoint = {
+  x: number
+  y: number
+  radius?: number
+  fill?: string
+}
+
+// TODO: exchange math random with uuid generator
+export const DataPoint = ({ datum, xScale, yScale }: DataPointProps) => {
+  return (
+    <circle
+      key={Math.random() * 1}
+      cx={xScale(datum.x)}
+      cy={yScale(datum.y)}
+      r={datum.radius ?? 2}
+      fill={datum.fill ?? 'black'}
+    />
+  )
 }
