@@ -11,28 +11,3 @@ This library provides wrappers for d3 visualization components, starting with a 
 ## Prerequisites
 
 `npm i -S react d3`
-
-## Scatter plot
-
-Pass an array of x,y value pairs to the scatter plot. For instance:
-
-```javascript
-const data = [[1,1], [2,10], [5,16]]
-```
-
-
-```javascript
-import { ScatterPlot } from 'react-d3-plotter'
-...
-<ScatterPlot data={data} />
-```
-
-### Props
-
-| props | default | type | description |
-| - | - | - | - |
-| data | `[]` | array | Array of x, y value pairs |
-| width | 600 | number | The width of the scatter plot in `px` |
-| height | 400 | number | The height of the scatter plot in `px` |
-| padding | 60 | number | A padding value in `px` to properly display axis |
-| radius | 2 | number | The radius of data points in `px` |
